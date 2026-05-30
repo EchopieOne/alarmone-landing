@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to set an alarm for another time zone on iPhone - Alarm One</title>
+    <meta
+      name="description"
+      content="Learn how iPhone alarms behave across time zones, when to use World Clock, and how Alarm One helps set city-based alarms for travel, remote meetings, and family calls."
+    >
+    <link rel="canonical" href="https://alarmone.app/blog/time-zone-alarm-iphone.html">
+    <link rel="icon" href="../assets/alarm-one-logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+    <meta property="og:title" content="How to set an alarm for another time zone on iPhone">
+    <meta
+      property="og:description"
+      content="A practical guide for iPhone users who need alarms for another city's local time."
+    >
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to set an alarm for another time zone on iPhone",
+        "description": "Learn how iPhone alarms behave across time zones, when to use World Clock, and how Alarm One helps set city-based alarms for travel, remote meetings, and family calls.",
+        "author": {
+          "@type": "Organization",
+          "name": "Alarm One"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Alarm One",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://alarmone.app/assets/alarm-one-logo.svg"
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="../index.html" aria-label="Alarm One home">
+          <img src="../assets/alarm-one-logo.svg" alt="">
+          <span>Alarm One</span>
+        </a>
+        <div class="nav-links">
+          <a href="../index.html#features">Features</a>
+          <a href="./">Blog</a>
+        </div>
+        <a class="button primary" href="https://apps.apple.com/app/id6748434148">Download</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="article-hero">
+        <div class="article-meta">
+          <a href="./">Blog</a>
+          <span>&middot;</span>
+          <span>Guide</span>
+          <span>&middot;</span>
+          <span>6 min read</span>
+        </div>
+        <h1>How to set an alarm for another time zone on iPhone</h1>
+        <p class="lead">
+          If you work with another country, travel often, or call family abroad, the
+          hard part is not setting an alarm. It is setting the alarm for the right
+          local time without doing the conversion twice.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://apps.apple.com/app/id6748434148">Try Alarm One</a>
+          <a class="button ghost" href="../index.html">&larr; Back to homepage</a>
+        </div>
+      </section>
+
+      <div class="article-body">
+        <article>
+          <nav class="toc" aria-label="Article contents">
+            <h2>Contents</h2>
+            <p><a href="#quick-answer">Quick answer</a></p>
+            <p><a href="#iphone-clock">What the iPhone Clock app can do (and can't)</a></p>
+            <p><a href="#shortcuts">What about Shortcuts?</a></p>
+            <p><a href="#alarm-one">How Alarm One handles it</a></p>
+            <p><a href="#examples">Common examples</a></p>
+          </nav>
+
+          <section id="quick-answer">
+            <h2>Quick answer</h2>
+            <p>
+              The built-in iPhone Clock app can show the current time in another city
+              with World Clock, and it can create local alarms. But the two features
+              are separate — there is no way to say "wake me at 9:00 AM New York time"
+              directly. You have to check the time difference, calculate the equivalent
+              local time, then create the alarm manually.
+            </p>
+            <p>
+              Alarm One makes this a single flow:
+            </p>
+            <div class="steps">
+              <div class="step">
+                <h3>Pick a city</h3>
+                <p>Search for the city whose local time matters (e.g. New York, London, Tokyo).</p>
+              </div>
+              <div class="step">
+                <h3>Set the time in that city's clock</h3>
+                <p>Choose 9:00 AM and it means 9:00 AM there, not where you are.</p>
+              </div>
+              <div class="step">
+                <h3>Done</h3>
+                <p>Alarm One calculates your local equivalent automatically and updates it if daylight saving time changes.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="iphone-clock">
+            <h2>What the iPhone Clock app can do (and can't)</h2>
+            <p>The built-in workflow looks like this:</p>
+            <div class="steps">
+              <div class="step">
+                <h3>Add the other city to World Clock</h3>
+                <p>Open Clock → World Clock → tap + → search the city.</p>
+              </div>
+              <div class="step">
+                <h3>Check the time difference</h3>
+                <p>Note the offset (e.g. "New York is -12 hours from your location").</p>
+              </div>
+              <div class="step">
+                <h3>Create a regular alarm with the converted time</h3>
+                <p>Go to Alarms and manually set the equivalent time in your local clock.</p>
+              </div>
+            </div>
+            <p>This works for a one-off, but has real limitations:</p>
+            <div class="note">
+              <h3>Pain points</h3>
+              <ul>
+                <li><strong>DST breaks it silently.</strong> When daylight saving time shifts, your alarm is now off by an hour — and there is no warning.</li>
+                <li><strong>No label.</strong> The alarm shows "7:00 AM" with no indication that this was supposed to be "9:00 AM New York."</li>
+                <li><strong>Repeating alarms drift.</strong> If you set a recurring alarm and the offset changes (DST, travel), every future occurrence is wrong.</li>
+                <li><strong>Mental math every time.</strong> For multiple cities, you are doing subtraction in your head daily.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="shortcuts">
+            <h2>What about Shortcuts?</h2>
+            <p>
+              iOS Shortcuts can technically create time-zone-aware reminders using
+              date conversion actions. Some power users build automations this way.
+              But in practice:
+            </p>
+            <ul>
+              <li>The setup is complex — multiple actions, date formatting, and "if" blocks.</li>
+              <li>There is no UI to see all your time zone alarms at a glance.</li>
+              <li>Shortcuts reminders are notifications, not system alarms — they do not override Do Not Disturb or silent mode.</li>
+              <li>Editing or disabling one alarm means editing the Shortcut itself.</li>
+            </ul>
+            <p>
+              For people who want a reliable alarm (not just a notification), Shortcuts
+              is a workaround, not a solution.
+            </p>
+          </section>
+
+          <section id="alarm-one">
+            <h2>How Alarm One handles time zone alarms</h2>
+            <p>
+              Alarm One treats time zone alarms as first-class alarms — not clock
+              conversions, not notifications, not workarounds. Here is what that means:
+            </p>
+            <ul>
+              <li><strong>You think in their time.</strong> Set "9:00 AM New York" and the alarm list shows "9:00 AM New York." No mental math.</li>
+              <li><strong>DST is handled automatically.</strong> When New York springs forward or falls back, the alarm adjusts. You do not need to remember.</li>
+              <li><strong>Repeating works correctly.</strong> A daily "9:00 AM London" alarm stays at 9:00 AM London even when the offset to your location changes.</li>
+              <li><strong>It is a real system alarm.</strong> Uses the iOS alarm infrastructure — it will ring even in Do Not Disturb and silent mode, just like the built-in Clock app.</li>
+            </ul>
+            <div class="note">
+              <h3>Example 1: Remote meeting</h3>
+              <p>
+                You are in Berlin and have a daily standup at 9:00 AM New York time.
+                Instead of calculating that it is 3:00 PM Berlin (or 2:00 PM in winter),
+                set a repeating alarm for "9:00 AM New York." It stays correct year-round.
+              </p>
+            </div>
+            <div class="note">
+              <h3>Example 2: Cross-dateline family call</h3>
+              <p>
+                Your parents are in Tokyo. You want to call at 10:00 PM Tokyo time
+                (a good hour for them after dinner). That might be morning for you in
+                Los Angeles — or the previous calendar day. Set "10:00 PM Tokyo" and
+                stop thinking about which day it falls on.
+              </p>
+            </div>
+          </section>
+
+          <section id="examples">
+            <h2>When a time zone alarm is better than a world clock</h2>
+            <div class="feature-grid" style="grid-template-columns: 1fr;">
+              <article class="feature">
+                <h3>Remote work</h3>
+                <p>Daily standups, client calls, market openings — anything anchored to someone else's workday. A world clock shows the time; a time zone alarm makes sure you act on it.</p>
+              </article>
+              <article class="feature">
+                <h3>Family abroad</h3>
+                <p>Call at a considerate local hour without checking a converter. Especially helpful when DST makes the offset shift twice a year.</p>
+              </article>
+              <article class="feature">
+                <h3>Travel days</h3>
+                <p>Set wake-ups and reminders anchored to the destination city before you land. Your alarm adjusts as your phone picks up the new time zone — you do not have to redo anything.</p>
+              </article>
+              <article class="feature">
+                <h3>International classes or exams</h3>
+                <p>Online courses often list times in the instructor's time zone. Set the alarm directly in that zone so you never miscalculate a lecture or deadline.</p>
+              </article>
+            </div>
+          </section>
+
+        </article>
+      </div>
+
+      <section class="section">
+        <div class="cta">
+          <h2>Set alarms by the city<br>that matters.</h2>
+          <p>Alarm One keeps time zone alarms readable, flexible, and close to your daily routine.</p>
+          <div class="hero-actions" style="justify-content: center">
+            <a class="button primary" href="https://apps.apple.com/app/id6748434148">Download Alarm One</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="brand" href="../index.html">
+          <img src="../assets/alarm-one-logo.svg" alt="">
+          <span>Alarm One</span>
+        </a>
+        <div class="footer-links">
+          <a href="../index.html">Home</a>
+          <a href="./">Blog</a>
+          <a href="https://apps.apple.com/app/id6748434148">App Store</a>
+        </div>
+        <span>&copy; <span data-year>2026</span> Echopie One</span>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
