@@ -16,149 +16,92 @@ document.querySelectorAll("[data-local-time]").forEach((node) => {
   node.textContent = formatter.format(new Date());
 });
 
-/* ---- GSAP scroll animations ---- */
+/* ---- GSAP motion ---- */
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window.gsap !== "undefined") {
+  document.documentElement.dataset.gsap = gsap.version;
 
-const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const mm = gsap.matchMedia();
 
-if (!prefersReduced) {
-  // Hero — fade in on load
-  gsap.from(".hero-copy", {
-    opacity: 0,
-    y: 40,
-    duration: 0.8,
-    ease: "power2.out",
-  });
-
-  gsap.from(".phone-stage", {
-    opacity: 0,
-    y: 60,
-    duration: 0.9,
-    delay: 0.2,
-    ease: "power2.out",
-  });
-
-  // Feature cards — staggered reveal
-  ScrollTrigger.batch(".feature", {
-    onEnter: (elements) => {
-      gsap.from(elements, {
-        opacity: 0,
-        y: 40,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: "power2.out",
-        overwrite: true,
-      });
+  mm.add(
+    {
+      reduceMotion: "(prefers-reduced-motion: reduce)",
+      desktop: "(min-width: 900px)",
     },
-    start: "top 85%",
-    once: true,
-  });
+    (context) => {
+      const { reduceMotion, desktop } = context.conditions;
+      if (reduceMotion) return;
 
-  // Split sections — slide in from sides
-  document.querySelectorAll(".split").forEach((section) => {
-    const children = section.children;
-    if (children.length < 2) return;
+      gsap.defaults({
+        duration: 0.72,
+        ease: "power2.out",
+        overwrite: "auto",
+      });
 
-    gsap.from(children[0], {
-      opacity: 0,
-      x: -40,
-      duration: 0.7,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: section,
-        start: "top 80%",
-        once: true,
-      },
-    });
-
-    gsap.from(children[1], {
-      opacity: 0,
-      x: 40,
-      duration: 0.7,
-      delay: 0.15,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: section,
-        start: "top 80%",
-        once: true,
-      },
-    });
-  });
-
-  // Timeline rows — staggered fade up
-  ScrollTrigger.batch(".timeline-row", {
-    onEnter: (elements) => {
-      gsap.from(elements, {
-        opacity: 0,
-        x: -20,
+      gsap.from(".site-header", {
+        y: -12,
+        autoAlpha: 0,
         duration: 0.5,
-        stagger: 0.12,
-        ease: "power2.out",
-        overwrite: true,
+        clearProps: "all",
       });
-    },
-    start: "top 85%",
-    once: true,
-  });
 
-  // Review cards — staggered reveal
-  ScrollTrigger.batch(".review-card", {
-    onEnter: (elements) => {
-      gsap.from(elements, {
-        opacity: 0,
-        y: 30,
-        duration: 0.6,
-        stagger: 0.12,
-        ease: "power2.out",
-        overwrite: true,
-      });
-    },
-    start: "top 85%",
-    once: true,
-  });
-
-  // FAQ items — fade up
-  ScrollTrigger.batch(".faq", {
-    onEnter: (elements) => {
-      gsap.from(elements, {
-        opacity: 0,
-        y: 20,
-        duration: 0.5,
+      gsap.from(".hero-copy > *", {
+        y: 28,
+        autoAlpha: 0,
         stagger: 0.08,
-        ease: "power2.out",
-        overwrite: true,
+        duration: 0.78,
+        clearProps: "all",
       });
-    },
-    start: "top 88%",
-    once: true,
-  });
 
-  // CTA — scale up
-  gsap.from(".cta", {
-    opacity: 0,
-    scale: 0.95,
-    duration: 0.7,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".cta",
-      start: "top 85%",
-      once: true,
-    },
-  });
+      gsap.from(".phone-stage", {
+        y: desktop ? 36 : 24,
+        scale: desktop ? 0.96 : 0.98,
+        autoAlpha: 0,
+        delay: 0.18,
+        duration: 0.86,
+        clearProps: "all",
+      });
 
-  // Section headings — fade up
-  gsap.utils.toArray(".section-head").forEach((head) => {
-    gsap.from(head, {
-      opacity: 0,
-      y: 30,
-      duration: 0.6,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: head,
-        start: "top 85%",
-        once: true,
-      },
-    });
-  });
+      const revealTargets = [
+        ".section-kicker",
+        ".section-head",
+        ".feature",
+        ".scenario",
+        ".timeline-row",
+        ".review-card",
+        ".faq",
+        ".blog-preview",
+        ".final-cta-inner",
+        ".article-hero > *",
+        ".article-body section",
+        ".blog-card",
+      ].join(",");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            observer.unobserve(entry.target);
+            gsap.from(entry.target, {
+              y: 24,
+              autoAlpha: 0,
+              duration: 0.62,
+              clearProps: "all",
+            });
+          });
+        },
+        {
+          rootMargin: "0px 0px -12% 0px",
+          threshold: 0.12,
+        }
+      );
+
+      document.querySelectorAll(revealTargets).forEach((node) => {
+        observer.observe(node);
+      });
+
+      return () => observer.disconnect();
+    }
+  );
 }

@@ -118,7 +118,7 @@
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
+      <section class="hero" aria-labelledby="hero-title" data-screen-label="Home hero">
         <div class="hero-copy">
           <h1 id="hero-title">Alarms designed<br>for real life.</h1>
           <p class="lead">
@@ -130,13 +130,22 @@
               Download on the App Store
             </a>
             <a class="button ghost" href="blog/time-zone-alarm-iphone.html">
-              Learn about time zone alarms &rsaquo;
+              Learn about time zone alarms
             </a>
           </div>
           <ul class="hero-points" aria-label="Key benefits">
-            <li><span class="check">&#10003;</span><span>Repeating alarms for weekly, monthly, workday, and rotation routines.</span></li>
-            <li><span class="check">&#10003;</span><span>Alarms set by another city's local time — no mental math.</span></li>
-            <li><span class="check">&#10003;</span><span>Widgets and Live Activity keep your next alarm always visible.</span></li>
+            <li>
+              <strong>Flexible repeats</strong>
+              <span>Weekly, monthly, workday, and rotation routines.</span>
+            </li>
+            <li>
+              <strong>Time zone alarms</strong>
+              <span>Set another city's local time without mental math.</span>
+            </li>
+            <li>
+              <strong>Always visible</strong>
+              <span>Widgets and Live Activity keep the next alarm close.</span>
+            </li>
           </ul>
         </div>
 
@@ -147,77 +156,78 @@
         </div>
       </section>
 
-      <div class="band">
-        <section class="section" id="features" aria-labelledby="features-title">
-          <div class="section-head">
-            <h2 id="features-title">Every alarm rule you actually need.</h2>
-            <p>
-              Alarm One keeps the familiar alarm experience, then adds the control
-              that the default Clock app doesn't offer.
-            </p>
-          </div>
-
-          <div class="feature-grid">
-            <article class="feature">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M7 3v4M17 3v4M4.5 9h15M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-              <h3>Flexible Repeats</h3>
-              <p>Weekly, monthly, yearly, and custom cycle rules — set it once and stop rebuilding alarms.</p>
-            </article>
-            <article class="feature">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM3.6 9h16.8M3.6 15h16.8M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-              <h3>Time Zone Alarms</h3>
-              <p>Choose a city and set the alarm by its local time. DST changes are handled automatically.</p>
-            </article>
-            <article class="feature">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 8v4l3 3M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <h3>One-Time Alarms</h3>
-              <p>Fire once and disappear. No leftover alarms cluttering your list after flights or naps.</p>
-            </article>
-            <article class="feature">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M9 18V5l12-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm12-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <h3>Custom Ringtones</h3>
-              <p>Pick your own sound — something that wakes you up, or a gentle tone for soft reminders.</p>
-            </article>
-            <article class="feature">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2ZM9 8h6M9 12h6M9 16h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-              <h3>Widgets & Live Activity</h3>
-              <p>Keep your next alarm visible on the lock screen, home screen, or Dynamic Island.</p>
-            </article>
-            <article class="feature">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M4 4h16v16H4zM9 9h6v6H9z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <h3>Groups & Labels</h3>
-              <p>Organize alarms by context — work, morning routine, travel — and manage them as a set.</p>
-            </article>
-          </div>
-        </section>
-      </div>
-
-      <section class="section split" aria-labelledby="time-zone-title">
-        <div>
-          <h2 id="time-zone-title">Set alarms in their time, not yours.</h2>
-          <p class="lead">
-            Pick a city. Set the time in that city's clock.
-            Alarm One handles the conversion automatically.
+      <section class="section feature-system" id="features" aria-labelledby="features-title" data-screen-label="Features">
+        <div class="section-kicker">Built around real schedules</div>
+        <div class="section-head">
+          <h2 id="features-title">Everything you need. Nothing you do not.</h2>
+          <p>
+            Alarm One keeps the familiar iPhone alarm experience, then adds the
+            rules, context, and visibility the built-in Clock app leaves out.
           </p>
-          <div class="section-actions">
-            <a class="button primary" href="blog/time-zone-alarm-iphone.html">How it works</a>
-            <a class="button ghost" href="https://apps.apple.com/app/id6748434148">Try Alarm One &rsaquo;</a>
-          </div>
         </div>
-        <div class="scenario-list">
-          <article class="scenario">
+
+        <div class="feature-grid">
+          <article class="feature">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 3v4M17 3v4M4.5 9h15M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <h3>Flexible Repeats</h3>
+            <p>Weekly, monthly, yearly, and custom cycle rules that stay readable.</p>
+          </article>
+          <article class="feature">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM3.6 9h16.8M3.6 15h16.8M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <h3>Time Zone Alarms</h3>
+            <p>Choose a city and set the alarm by its local time, including DST.</p>
+          </article>
+          <article class="feature">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 8v4l3 3M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>One-Time Alarms</h3>
+            <p>Fire once and disappear after flights, naps, or one-off reminders.</p>
+          </article>
+          <article class="feature">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 18V5l12-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm12-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Custom Ringtones</h3>
+            <p>Pick the sound that fits the moment, from loud wake-ups to soft cues.</p>
+          </article>
+          <article class="feature">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2ZM9 8h6M9 12h6M9 16h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <h3>Widgets & Live Activity</h3>
+            <p>Keep the next alarm visible on the lock screen and home screen.</p>
+          </article>
+          <article class="feature">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 4h16v16H4zM9 9h6v6H9z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Groups & Labels</h3>
+            <p>Organize alarms by work, travel, family, routines, and projects.</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="quiet-band">
+        <section class="section time-zone-section split" aria-labelledby="time-zone-title" data-screen-label="Time zones">
+          <div>
+            <div class="section-kicker">Time zone alarms</div>
+            <h2 id="time-zone-title">Set alarms in their time, not yours.</h2>
+            <p class="lead">
+              Pick a city. Set the time in that city's clock.
+              Alarm One handles the conversion automatically.
+            </p>
+            <div class="section-actions">
+              <a class="button primary" href="blog/time-zone-alarm-iphone.html">How it works</a>
+              <a class="button ghost" href="https://apps.apple.com/app/id6748434148">Try Alarm One</a>
+            </div>
+          </div>
+          <div class="scenario-list">
+            <article class="scenario">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M4 7h16M7 4v6M17 4v6M5 13h14M7 17h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
@@ -244,107 +254,125 @@
               <p>Anchor wake-ups to the city you're landing in before your body catches up.</p>
             </div>
           </article>
-        </div>
-      </section>
-
-      <div class="band">
-        <section class="section split" aria-labelledby="routine-title">
-          <div class="timeline" aria-label="Example alarm schedule">
-            <div class="timeline-row">
-              <strong>07:30</strong>
-              <span>Weekday wake-up, Mon–Fri only</span>
-              <i class="dot" aria-hidden="true"></i>
-            </div>
-            <div class="timeline-row">
-              <strong>09:00 NY</strong>
-              <span>Client call by New York local time</span>
-              <i class="dot" aria-hidden="true"></i>
-            </div>
-            <div class="timeline-row">
-              <strong>Monthly</strong>
-              <span>First Monday report reminder</span>
-              <i class="dot" aria-hidden="true"></i>
-            </div>
-            <div class="timeline-row">
-              <strong>Once</strong>
-              <span>Early flight — fires and disappears</span>
-              <i class="dot" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div>
-            <h2 id="routine-title">One app for the patterns people actually use.</h2>
-            <p class="lead">
-              Basic alarms are fine until schedules become monthly, seasonal,
-              shifted, or international. Alarm One keeps those patterns
-              readable and close to the iPhone experience.
-            </p>
           </div>
         </section>
       </div>
 
-      <section class="section" id="reviews" aria-labelledby="reviews-title">
+      <section class="section routine-section split" aria-labelledby="routine-title" data-screen-label="Routine">
+        <div>
+          <div class="section-kicker">Built around your routine</div>
+          <h2 id="routine-title">One app for every part of your day.</h2>
+          <p class="lead">
+            Basic alarms are fine until schedules become monthly, seasonal,
+            shifted, or international. Alarm One keeps those patterns readable
+            and close to the iPhone experience.
+          </p>
+        </div>
+        <div class="timeline" aria-label="Example alarm schedule">
+            <div class="timeline-row">
+              <strong>07:30</strong>
+              <span>Weekday wake-up, Mon–Fri only</span>
+              <i class="switch" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-row">
+              <strong>09:00 NY</strong>
+              <span>Client call by New York local time</span>
+              <i class="switch" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-row">
+              <strong>Monthly</strong>
+              <span>First Monday report reminder</span>
+              <i class="switch" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-row">
+              <strong>Once</strong>
+              <span>Early flight — fires and disappears</span>
+              <i class="switch" aria-hidden="true"></i>
+            </div>
+          </div>
+      </section>
+
+      <section class="section" id="reviews" aria-labelledby="reviews-title" data-screen-label="Reviews">
         <div class="section-head">
           <h2 id="reviews-title">Loved by real users.</h2>
         </div>
         <div class="reviews-grid">
           <blockquote class="review-card">
-            <div class="review-stars">★★★★★</div>
+            <div class="quote-mark" aria-hidden="true">"</div>
             <p class="review-title">Perfect for One-Time Alarms!</p>
             <p>This app is so useful! I was scared of oversleeping for my early morning flight, so I set a bunch of alarms. The best part is I don't have to delete them one by one afterwards. Total lifesaver for travel!</p>
+            <div class="review-stars">★★★★★</div>
             <cite>App Store User</cite>
           </blockquote>
           <blockquote class="review-card">
-            <div class="review-stars">★★★★★</div>
+            <div class="quote-mark" aria-hidden="true">"</div>
             <p class="review-title">Easy to use</p>
             <p>Like the app. Simple and reliable for managing multiple alarms without the clutter.</p>
+            <div class="review-stars">★★★★★</div>
             <cite>App Store User</cite>
           </blockquote>
           <blockquote class="review-card">
-            <div class="review-stars">★★★★★</div>
+            <div class="quote-mark" aria-hidden="true">"</div>
             <p class="review-title">Finally, a smart holiday alarm</p>
             <p>No more messing with Shortcuts to skip alarms on holidays. One app handles it all. Highly recommend.</p>
+            <div class="review-stars">★★★★★</div>
             <cite>App Store User</cite>
           </blockquote>
         </div>
       </section>
 
-      <div class="band">
-        <section class="section" id="faq" aria-labelledby="faq-title">
-          <div class="section-head">
-            <h2 id="faq-title">Frequently asked.</h2>
+      <div class="quiet-band">
+        <section class="section faq-section split" id="faq" aria-labelledby="faq-title" data-screen-label="FAQ">
+          <div>
+            <div class="section-kicker">FAQ</div>
+            <h2 id="faq-title">Frequently asked questions.</h2>
           </div>
           <div class="faq-list">
-            <article class="faq">
-              <h3>How is Alarm One different from the built-in Clock app?</h3>
+            <details class="faq" open>
+              <summary>How is Alarm One different from the built-in Clock app?</summary>
               <p>The Clock app covers basic daily alarms. Alarm One adds flexible repeat rules (monthly, yearly, custom cycles), time zone alarms by city, one-time alarms that auto-delete, custom ringtones, alarm groups, and widgets to keep your next alarm visible.</p>
-            </article>
-            <article class="faq">
-              <h3>What are one-time alarms?</h3>
+            </details>
+            <details class="faq">
+              <summary>What are one-time alarms?</summary>
               <p>A one-time alarm fires once and disappears from your list. Perfect for early flights, naps, or any reminder you don't want to manually delete afterwards.</p>
-            </article>
-            <article class="faq">
-              <h3>Can I use my own ringtones?</h3>
+            </details>
+            <details class="faq">
+              <summary>Can I use my own ringtones?</summary>
               <p>Yes. Alarm One supports custom ringtones so you can pick a sound that works for you — loud for heavy sleepers, gentle for light reminders.</p>
-            </article>
-            <article class="faq">
-              <h3>How do time zone alarms work?</h3>
+            </details>
+            <details class="faq">
+              <summary>How do time zone alarms work?</summary>
               <p>Pick a city, set the time in that city's clock, and Alarm One calculates your local equivalent. It updates automatically when daylight saving time changes.</p>
-            </article>
-            <article class="faq">
-              <h3>Who is it for?</h3>
+            </details>
+            <details class="faq">
+              <summary>Who is it for?</summary>
               <p>Anyone whose schedule doesn't fit "repeat every day": people with monthly meetings, remote workers across time zones, travelers, or anyone who wants cleaner alarm management.</p>
-            </article>
+            </details>
           </div>
         </section>
       </div>
 
-      <section class="section">
-        <div class="cta">
-          <h2>Make your next alarm<br>easier to trust.</h2>
-          <p>Download Alarm One for iPhone and set smarter alarms for real life.</p>
-          <div class="hero-actions" style="justify-content: center; margin-top: 8px;">
+      <section class="section blog-teaser" aria-labelledby="blog-teaser-title" data-screen-label="Blog teaser">
+        <div class="blog-preview">
+          <div class="mini-phone" aria-hidden="true">
+            <img src="assets/app-screenshot.jpg" alt="">
+          </div>
+          <div>
+            <div class="section-kicker">From the blog</div>
+            <h2 id="blog-teaser-title">How to set an alarm for another time zone on iPhone</h2>
+            <p>Step-by-step guide to picking a city, understanding time differences, and never missing what matters.</p>
+            <a class="button ghost" href="blog/time-zone-alarm-iphone.html">Read the article</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" data-screen-label="Final CTA">
+        <div class="final-cta-inner">
+          <img src="assets/alarm-one-logo.svg" alt="" aria-hidden="true">
+          <h2>Make your next alarm easier to trust.</h2>
+          <div class="hero-actions">
             <a class="button primary" href="https://apps.apple.com/app/id6748434148">Download on the App Store</a>
-            <a class="button ghost" href="blog/" style="color: rgba(255,255,255,0.8)">Read the blog &rsaquo;</a>
+            <a class="button secondary" href="blog/">Read the blog</a>
           </div>
         </div>
       </section>
@@ -363,8 +391,7 @@
         <span>&copy; <span data-year>2026</span> Echopie One</span>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="assets/vendor/gsap.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
