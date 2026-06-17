@@ -695,6 +695,14 @@ h3 {
   transform: translateY(-2px);
 }
 
+.blog-card-image {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
 .blog-card-meta {
   color: var(--accent-strong);
   font-size: 12px;
@@ -765,6 +773,28 @@ h3 {
 
 .article-body ul li {
   margin-bottom: 8px;
+}
+
+.article-illustration {
+  margin: 28px 0 0;
+}
+
+.article-illustration img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.article-illustration figcaption {
+  max-width: 680px;
+  margin: 10px auto 0;
+  color: var(--quiet);
+  font-size: 14px;
+  line-height: 1.55;
+  text-align: center;
 }
 
 .toc,
