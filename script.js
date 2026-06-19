@@ -45,22 +45,28 @@ if (typeof window.gsap !== "undefined") {
         clearProps: "all",
       });
 
-      gsap.from(".hero-copy > *", {
-        y: 28,
-        autoAlpha: 0,
-        stagger: 0.08,
-        duration: 0.78,
-        clearProps: "all",
-      });
+      const heroItems = document.querySelectorAll(".hero-copy > *");
+      if (heroItems.length) {
+        gsap.from(heroItems, {
+          y: 28,
+          autoAlpha: 0,
+          stagger: 0.08,
+          duration: 0.78,
+          clearProps: "all",
+        });
+      }
 
-      gsap.from(".phone-stage", {
-        y: desktop ? 36 : 24,
-        scale: desktop ? 0.96 : 0.98,
-        autoAlpha: 0,
-        delay: 0.18,
-        duration: 0.86,
-        clearProps: "all",
-      });
+      const phoneStage = document.querySelector(".phone-stage");
+      if (phoneStage) {
+        gsap.from(phoneStage, {
+          y: desktop ? 36 : 24,
+          scale: desktop ? 0.96 : 0.98,
+          autoAlpha: 0,
+          delay: 0.18,
+          duration: 0.86,
+          clearProps: "all",
+        });
+      }
 
       const revealTargets = [
         ".section-kicker",
