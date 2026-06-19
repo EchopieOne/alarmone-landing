@@ -988,6 +988,11 @@ h3 {
     font-size: 38px;
   }
 
+  .article-body h2 {
+    font-size: 32px;
+    line-height: 1.08;
+  }
+
   .hero-actions,
   .section-actions,
   .final-cta .hero-actions {
