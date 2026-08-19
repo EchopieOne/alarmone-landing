@@ -703,6 +703,12 @@ h3 {
   background: #fff;
 }
 
+.blog-card-image--simulator {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: 50% 90%;
+}
+
 .blog-card-meta {
   color: var(--accent-strong);
   font-size: 12px;
@@ -795,6 +801,12 @@ h3 {
   font-size: 14px;
   line-height: 1.55;
   text-align: center;
+}
+
+.article-simulator-shot {
+  max-width: 420px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .toc,
