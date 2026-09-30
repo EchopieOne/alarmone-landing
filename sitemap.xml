@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://alarmone.echopie.com/</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://alarmone.echopie.com/blog/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://alarmone.echopie.com/blog/shift-work-alarm-iphone</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://alarmone.echopie.com/blog/one-time-alarm-iphone</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://alarmone.echopie.com/blog/set-alarm-specific-date-iphone</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://alarmone.echopie.com/blog/alarm-every-other-day-iphone</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://alarmone.echopie.com/blog/time-zone-alarm-iphone</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://alarmone.echopie.com/blog/iphone-alarm-vs-reminder</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -49,5 +49,15 @@
     <loc>https://alarmone.echopie.com/privacy</loc>
     <lastmod>2026-06-19</lastmod>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://alarmone.echopie.com/blog/custom-alarm-sound-iphone</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alarmone.echopie.com/blog/delete-all-alarms-iphone</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>
