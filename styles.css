@@ -891,6 +891,31 @@ summary:focus-visible,
   margin-left: auto;
 }
 
+.article-screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 740px;
+  margin: 28px auto 0;
+}
+
+.article-screenshot-grid .article-illustration {
+  margin: 0;
+}
+
+.blog-card-app-image {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: var(--wash);
+}
+
+@media (max-width: 480px) {
+  .article-screenshot-grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+  }
+}
+
 .toc,
 .note,
 .steps {
