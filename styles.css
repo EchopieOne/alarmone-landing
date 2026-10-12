@@ -792,6 +792,149 @@ h3 {
   padding-top: 6px;
 }
 
+.quick-answer,
+.publisher-note,
+.rotation-preview {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-muted);
+}
+
+.article-body .quick-answer h2,
+.rotation-preview h3 {
+  margin: 0 0 14px;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.quick-answer p:last-child,
+.publisher-note p:last-child {
+  margin-bottom: 0;
+}
+
+.publisher-note {
+  font-size: 14px;
+}
+
+.setup-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.setup-card {
+  display: block;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.setup-card:hover {
+  border-color: var(--accent-strong);
+}
+
+.setup-card strong,
+.setup-card span {
+  display: block;
+}
+
+.setup-card strong {
+  font-size: 20px;
+}
+
+.setup-card span {
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.rotation-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.rotation-form[hidden] {
+  display: none;
+}
+
+.rotation-form label {
+  display: grid;
+  min-width: 0;
+  gap: 8px;
+  font-weight: 650;
+}
+
+.rotation-form input {
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  padding: 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+
+.rotation-form input:focus-visible {
+  outline: 3px solid var(--accent-strong);
+  outline-offset: 3px;
+}
+
+.rotation-form .button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  cursor: pointer;
+}
+
+.rotation-days {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.rotation-day {
+  display: grid;
+  gap: 6px;
+  padding: 14px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  font-size: 13px;
+}
+
+.rotation-day.is-work {
+  border-color: var(--accent-strong);
+  background: var(--wash-strong);
+}
+
+.rotation-day time {
+  font-weight: 700;
+}
+
+@media (max-width: 540px) {
+  .setup-grid,
+  .rotation-form {
+    grid-template-columns: 1fr;
+  }
+
+  .rotation-days {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quick-answer,
+  .publisher-note,
+  .rotation-preview {
+    padding: 20px;
+  }
+}
+
 [id] {
   scroll-margin-top: 80px;
 }

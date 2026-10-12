@@ -60,7 +60,7 @@ def resolve(path):
     return file if file.suffix else file.with_suffix(".html")
 
 
-pages = [ROOT / "index.html", *sorted((ROOT / "blog").glob("*.html"))]
+pages = [ROOT / "index.html", ROOT / "about.html", *sorted((ROOT / "blog").glob("*.html"))]
 docs = {page: Document(page.read_text()).root for page in pages}
 sitemap = ET.parse(ROOT / "sitemap.xml")
 ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
@@ -131,7 +131,13 @@ for page, doc in docs.items():
         article = next(item for item in schemas if item["@type"] == "BlogPosting")
         assert article["headline"] == doc.find("h1")[0].text(), f"{name}: schema headline mismatch"
         assert article["description"] == description, f"{name}: schema description mismatch"
-        assert article["author"]["@type"] == "Organization", f"{name}: editorial team should be an organization"
+        author = article["author"]
+        assert author["@type"] == "Organization", f"{name}: publisher byline should be an organization"
+        assert author["name"] == "Echopie One", f"{name}: unexpected publisher identity"
+        assert author["url"] == BASE + "/about", f"{name}: author should link to publisher information"
+        assert meta["article:author"] == author["url"], f"{name}: social author differs from JSON-LD"
+        byline = next(node for node in doc.find("div") if node.attrs.get("class") == "article-meta")
+        assert any(node.text() == author["name"] and urljoin(canonical, node.attrs.get("href", "")) == author["url"] for node in byline.find("a")), f"{name}: visible author differs from JSON-LD"
         assert article["dateModified"][:10] == meta["article:modified_time"][:10], f"{name}: modified date mismatch"
         times = [node.attrs["datetime"] for node in doc.find("time")]
         assert article["datePublished"][:10] in times and article["dateModified"][:10] in times, f"{name}: missing visible dates"
