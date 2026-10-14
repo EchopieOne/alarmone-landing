@@ -12,6 +12,15 @@ its raw HTML serves the sharing metadata, while browser navigation returns to `/
 This provides a new URL for diagnosing stale social cards. A successful deployment
 and image response do not prove that X has refreshed its displayed card.
 
+Both entry points declare `twitter:site="@gareth7ng"`, matching the X account in
+Alarm One's Contact Us screen (`alarm/Widgets/ContractUsView.swift` in the app repo).
+The X Cards markup reference requires either `twitter:site` or `twitter:site:id`
+for website attribution. The image remains explicitly declared in `twitter:image`
+and `og:image`; account attribution does not itself select or refresh the image.
+
+Reference: [X Cards Markup Tag Reference, official documentation archived on
+2026-01-16](https://web.archive.org/web/20260116124848/https://developer.x.com/en/docs/x-for-websites/cards/overview/markup).
+
 ## Generation prompt
 
 Use case: ads-marketing.
