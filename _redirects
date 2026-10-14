@@ -1,5 +1,6 @@
 # Keep legacy HTML URLs aligned with the extensionless canonical URLs.
 /index.html / 301
+/share.html /share 301
 /blog/index.html /blog/ 301
 /blog/shift-work-alarm-iphone.html /blog/shift-work-alarm-iphone 301
 /blog/rotating-shift-alarms-iphone.html /blog/rotating-shift-alarms-iphone 301

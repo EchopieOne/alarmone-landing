@@ -5,6 +5,13 @@ the existing Alarm One app icon. Exported as `assets/alarm-one-social-cover.png`
 at 1200 × 630 pixels. The original app screenshot remains the SoftwareApplication
 `screenshot`; the sharing cover is its `image` and the homepage's Open Graph/X image.
 
+The versioned sharing export is `assets/alarm-one-social-cover-v2.jpg`, a 1200 × 630
+sRGB JPEG of the same artwork. The homepage and `/share` use this smaller image.
+`/share` has its own canonical and Open Graph URL and is excluded from indexing;
+its raw HTML serves the sharing metadata, while browser navigation returns to `/`.
+This provides a new URL for diagnosing stale social cards. A successful deployment
+and image response do not prove that X has refreshed its displayed card.
+
 ## Generation prompt
 
 Use case: ads-marketing.
