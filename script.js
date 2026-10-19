@@ -38,14 +38,16 @@ if (typeof window.gsap !== "undefined") {
         overwrite: "auto",
       });
 
-      gsap.from(".site-header", {
+      const hasStoreBadge = (node) => node.matches(".app-store-link") || node.querySelector(".app-store-link");
+      const header = document.querySelector(".site-header");
+      if (header && !hasStoreBadge(header)) gsap.from(header, {
         y: -12,
         autoAlpha: 0,
         duration: 0.5,
         clearProps: "all",
       });
 
-      const heroItems = document.querySelectorAll(".hero-copy > *");
+      const heroItems = [...document.querySelectorAll(".hero-copy > *")].filter((node) => !hasStoreBadge(node));
       if (heroItems.length) {
         gsap.from(heroItems, {
           y: 28,
@@ -104,7 +106,7 @@ if (typeof window.gsap !== "undefined") {
       );
 
       document.querySelectorAll(revealTargets).forEach((node) => {
-        observer.observe(node);
+        if (!hasStoreBadge(node)) observer.observe(node);
       });
 
       return () => observer.disconnect();

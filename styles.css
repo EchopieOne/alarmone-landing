@@ -1102,6 +1102,11 @@ summary:focus-visible,
 
 /* Footer */
 
+.brand img { border-radius: 22.4%; }
+.app-store-link { display: inline-block; flex-shrink: 0; line-height: 0; }
+.app-store-link img { display: block; width: 168px; height: auto; }
+.nav .app-store-link img { width: 135px; }
+
 .site-footer {
   border-top: 1px solid var(--line);
   background: var(--page);
