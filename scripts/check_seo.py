@@ -4,6 +4,8 @@ Run from any directory with: python3 scripts/check_seo.py
 """
 
 import json
+import subprocess
+import sys
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
@@ -160,4 +162,11 @@ for page in pages:
         url = "/" + str(page.relative_to(ROOT))
         assert redirects.get(url) == url[:-5], f"Missing .html redirect for {url}"
 assert not set(redirects.values()) & set(redirects), "Redirect chain detected"
-print(f"Passed: {len(pages)} pages, {links_checked} local links/assets, {len(sitemap_urls)} sitemap URLs, {len(redirects)} redirects.")
+assert redirects.get("/blog") == "/blog/", "Missing permanent /blog -> /blog/ redirect"
+posts = [page for page in pages if page.parent.name == "blog" and page.name != "index.html"]
+for listing in [ROOT / "index.html", ROOT / "blog" / "index.html"]:
+    linked = {resolve(urlsplit(urljoin(BASE + ("/blog/" if listing.parent.name == "blog" else "/"), node.attrs.get("href", ""))).path) for node in docs[listing].find("a")}
+    missing = [p.name for p in posts if p not in linked]
+    assert not missing, f"{listing.relative_to(ROOT)} does not link: {missing}"
+subprocess.run([sys.executable, str(ROOT / "scripts" / "build_site.py"), "--check"], check=True)
+print(f"Passed: {len(pages)} pages, homepage and /blog/ link all {len(posts)} posts, {links_checked} local links/assets, {len(sitemap_urls)} sitemap URLs, {len(redirects)} redirects.")
