@@ -143,6 +143,11 @@ for page, doc in docs.items():
         assert visible_q, f"{name}: FAQPage present but no visible FAQ"
         assert visible_q == structured_q, f"{name}: FAQ questions out of sync: only visible {sorted(set(visible_q) - set(structured_q))}, only JSON-LD {sorted(set(structured_q) - set(visible_q))}"
         assert visible == structured, f"{name}: visible FAQ differs from JSON-LD"
+        if str(name) == "index.html":
+            # Homepage FAQ is numbered 1-10: questions 1-4 open by default, 5-10 closed.
+            opened = ["open" in node.attrs for node in doc.find("details") if node.attrs.get("class") == "faq"]
+            assert len(opened) == 10, f"{name}: expected 10 FAQs, found {len(opened)}"
+            assert opened == [True] * 4 + [False] * 6, f"{name}: FAQs 1-4 must be open and 5-10 closed"
     if page.parent.name == "blog" and page.name != "index.html":
         article = next(item for item in schemas if item["@type"] == "BlogPosting")
         assert article["headline"] == doc.find("h1")[0].text(), f"{name}: schema headline mismatch"
