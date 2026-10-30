@@ -62,6 +62,16 @@ def resolve(path):
     return file if file.suffix else file.with_suffix(".html")
 
 
+ECHOPIE = "https://echopie.com/"
+APP_STORE = "https://apps.apple.com/app/id6748434148"
+# FPL-6: every page with a site footer links to the Echopie brand site as a normal (followed) link.
+for footer_page in [ROOT / "index.html", ROOT / "about.html", ROOT / "support.html", ROOT / "privacy.html", *sorted((ROOT / "blog").glob("*.html"))]:
+    footer = Document(footer_page.read_text()).root.find("footer")
+    assert len(footer) == 1, f"{footer_page.relative_to(ROOT)}: expected one footer"
+    brand_links = [node for node in footer[0].find("a") if node.attrs.get("href") == ECHOPIE]
+    assert len(brand_links) == 1 and brand_links[0].text() == "An Echopie app", f"{footer_page.relative_to(ROOT)}: footer missing 'An Echopie app' link"
+    assert "rel" not in brand_links[0].attrs, f"{footer_page.relative_to(ROOT)}: Echopie footer link must be a normal follow link"
+
 pages = [ROOT / "index.html", ROOT / "about.html", *sorted((ROOT / "blog").glob("*.html"))]
 docs = {page: Document(page.read_text()).root for page in pages}
 sitemap = ET.parse(ROOT / "sitemap.xml")
@@ -166,6 +176,20 @@ for page, doc in docs.items():
         assert breadcrumb["itemListElement"][-1]["item"] == canonical
         assert resolve(urlsplit(article["image"]).path).is_file(), f"{name}: schema image missing"
         assert faq_schema, f"{name}: FAQ schema missing"
+    # FPL-6: Organization nodes and the app node list the Echopie brand site in sameAs; the app also lists its App Store URL.
+    nodes, stack = [], list(schemas)
+    while stack:
+        item = stack.pop()
+        if isinstance(item, dict):
+            nodes.append(item)
+            stack.extend(item.values())
+        elif isinstance(item, list):
+            stack.extend(item)
+    for item in nodes:
+        if item.get("@type") == "Organization":
+            assert ECHOPIE in item.get("sameAs", []), f"{name}: Organization JSON-LD missing sameAs {ECHOPIE}"
+        if item.get("@type") == "MobileApplication":
+            assert item.get("sameAs") == [APP_STORE, ECHOPIE], f"{name}: app JSON-LD sameAs should be the App Store URL and {ECHOPIE}"
     print(f"OK {name}: title {len(title)}, description {len(description)}")
 
 redirects = {}
