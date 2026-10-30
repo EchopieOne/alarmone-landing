@@ -1130,6 +1130,17 @@ summary:focus-visible,
   flex-wrap: wrap;
 }
 
+/* FPL-6 follow-up: the Echopie brand link in the compact footer is underlined like the homepage footer links. */
+.footer-more .footer-brand-link {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.footer-more .footer-brand-link:hover {
+  color: var(--ink);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

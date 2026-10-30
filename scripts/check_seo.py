@@ -4,6 +4,7 @@ Run from any directory with: python3 scripts/check_seo.py
 """
 
 import json
+import re
 import subprocess
 import sys
 from html.parser import HTMLParser
@@ -71,6 +72,10 @@ for footer_page in [ROOT / "index.html", ROOT / "about.html", ROOT / "support.ht
     brand_links = [node for node in footer[0].find("a") if node.attrs.get("href") == ECHOPIE]
     assert len(brand_links) == 1 and brand_links[0].text() == "An Echopie app", f"{footer_page.relative_to(ROOT)}: footer missing 'An Echopie app' link"
     assert "rel" not in brand_links[0].attrs, f"{footer_page.relative_to(ROOT)}: Echopie footer link must be a normal follow link"
+    # FPL-6 follow-up: styles.css resets links to no underline, so compact-footer pages mark the brand link to keep it visibly a link.
+    if "styles.css" in footer_page.read_text():
+        assert "footer-brand-link" in brand_links[0].attrs.get("class", "").split(), f"{footer_page.relative_to(ROOT)}: compact-footer Echopie link needs class footer-brand-link"
+assert re.search(r"\.footer-more \.footer-brand-link \{[^}]*text-decoration: underline;", (ROOT / "styles.css").read_text()), "styles.css: compact-footer Echopie link must be underlined"
 
 pages = [ROOT / "index.html", ROOT / "about.html", *sorted((ROOT / "blog").glob("*.html"))]
 docs = {page: Document(page.read_text()).root for page in pages}
