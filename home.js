@@ -145,7 +145,7 @@ function startMotion() {
   document.documentElement.dataset.gsap = gsap.version;
   const media = gsap.matchMedia();
   media.add("(prefers-reduced-motion: no-preference)", () => {
-    const title = document.querySelector(".hero h1, .blog-hero h1, .article-hero h1");
+    const title = document.querySelector(".hero-display, .blog-hero h1, .article-hero h1");
     if (title) gsap.from(title, { y: 18, duration: 0.8, ease: "power3.out", clearProps: "transform" });
     const shots = document.querySelectorAll(".product-shot");
     if (shots.length) gsap.from(shots, { y: 40, scale: 0.97, stagger: 0.08, duration: 0.9, ease: "power3.out", clearProps: "transform" });
@@ -169,8 +169,8 @@ function startMotion() {
     }, { threshold: 0.08, rootMargin: "0px 0px -5% 0px" });
     document.querySelectorAll([
       ".rotation-controls > h2", ".rotation-controls > p", ".rotation-presets", ".rotation-field", ".date-time-fields",
-      ".world-layout > h2", ".world-portrait", ".world-copy > *",
-      ".features-section > h2", ".capability", ".guide-links",
+      ".world-heading", ".world-portrait", ".world-copy > *",
+      ".features-heading", ".capability", ".guide-links",
       ".widget-copy > *", ".widget-picture", ".faq-header > *", ".faq",
       ".close-section > h2", ".close-bottom > p", ".footer-wordmark",
       ".featured-copy > *", ".featured-picture", ".guides-header > h2", ".guide-row",

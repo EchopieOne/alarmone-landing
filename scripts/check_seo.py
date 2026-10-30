@@ -102,6 +102,16 @@ for page, doc in docs.items():
     assert len(ids) == len(set(ids)), f"{name}: duplicate anchor IDs"
     for node in doc.find("img"):
         assert node.attrs.get("alt"), f"{name}: missing image alt"
+        if page.name == "index.html" and page.parent == ROOT:
+            assert node.attrs.get("width") and node.attrs.get("height"), f"{name}: image without width/height {node.attrs.get('src')}"
+    for node in doc.find("source"):
+        for candidate in node.attrs.get("srcset", "").split(","):
+            if candidate.strip():
+                target = resolve(unquote(urlsplit(urljoin(canonical, candidate.split()[0])).path))
+                assert target.is_file(), f"{name}: broken srcset URL {candidate.strip()}"
+    page_source = page.read_text()
+    for banned in ["[CONFIRM]", "TODO", "aggregateRating", "ratingValue", "Featured by"]:
+        assert banned not in page_source, f"{name}: unpublishable text {banned!r}"
     for tag, attribute in [("a", "href"), ("img", "src"), ("script", "src"), ("link", "href")]:
         for node in doc.find(tag):
             value = node.attrs.get(attribute)
@@ -128,6 +138,10 @@ for page, doc in docs.items():
     if faq_schema:
         visible = [(node.find("summary")[0].text(), node.find("p")[0].text()) for node in doc.find("details") if node.attrs.get("class") == "faq"]
         structured = [(q["name"], q["acceptedAnswer"]["text"]) for q in faq_schema[0]["mainEntity"]]
+        # Every visible question must have the same FAQPage name, in the same order.
+        visible_q, structured_q = [q for q, _ in visible], [q for q, _ in structured]
+        assert visible_q, f"{name}: FAQPage present but no visible FAQ"
+        assert visible_q == structured_q, f"{name}: FAQ questions out of sync: only visible {sorted(set(visible_q) - set(structured_q))}, only JSON-LD {sorted(set(structured_q) - set(visible_q))}"
         assert visible == structured, f"{name}: visible FAQ differs from JSON-LD"
     if page.parent.name == "blog" and page.name != "index.html":
         article = next(item for item in schemas if item["@type"] == "BlogPosting")

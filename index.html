@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>iPhone Alarm App for Shifts, Dates &amp; Sounds | Alarm One</title>
+    <title>iPhone Alarm App for Shifts, Dates &amp; Time Zones | Alarm One</title>
     <meta name="description" content="Plan shifts, future dates, and global calls with Alarm One for iPhone. Keep temporary alarms tidy and import custom sounds. Download and build your schedule.">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <link rel="canonical" href="https://alarmone.echopie.com/">
     <link rel="icon" href="assets/alarm-one-app-icon.jpg" type="image/jpeg">
     <meta name="apple-itunes-app" content="app-id=6748434148">
-    <link rel="preload" href="assets/fonts/libre-franklin-bold.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="stylesheet" href="home.css?v=20261019">
-    <meta property="og:title" content="iPhone Alarm App for Shifts, Dates &amp; Sounds | Alarm One">
+    <link rel="preload" href="assets/fonts/libre-franklin-bold-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="home.css?v=20261030">
+    <meta property="og:title" content="iPhone Alarm App for Shifts, Dates &amp; Time Zones | Alarm One">
     <meta property="og:description" content="Plan shifts, future dates, and global calls with Alarm One for iPhone. Keep temporary alarms tidy and import custom sounds. Download and build your schedule.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://alarmone.echopie.com/">
@@ -24,94 +24,162 @@
     <meta property="og:image:alt" content="Alarm One: iPhone alarms for your schedule, with the blue app icon and labels for rotating shifts and world clock alarms">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@gareth7ng">
-    <meta name="twitter:title" content="iPhone Alarm App for Shifts, Dates &amp; Sounds | Alarm One">
+    <meta name="twitter:title" content="iPhone Alarm App for Shifts, Dates &amp; Time Zones | Alarm One">
     <meta name="twitter:description" content="Plan shifts, future dates, and global calls with Alarm One for iPhone. Keep temporary alarms tidy and import custom sounds. Download and build your schedule.">
     <meta name="twitter:image" content="https://alarmone.echopie.com/assets/alarm-one-social-cover-v2.jpg">
     <meta name="twitter:image:alt" content="Alarm One: iPhone alarms for your schedule, with the blue app icon and labels for rotating shifts and world clock alarms">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Alarm One",
-        "url": "https://alarmone.echopie.com/",
-        "operatingSystem": "iOS 26 or later; custom ringtone import requires iOS 26.1 or later",
-        "applicationCategory": "UtilitiesApplication",
-        "description": "Plan shifts, future dates, and global calls with Alarm One for iPhone. Keep temporary alarms tidy and import custom sounds. Download and build your schedule.",
-        "image": "https://alarmone.echopie.com/assets/alarm-one-social-cover-v2.jpg",
-        "screenshot": "https://alarmone.echopie.com/assets/time-zone-alarm-iphone/weekly-alarm.png",
-        "downloadUrl": "https://apps.apple.com/app/apple-store/id6748434148?pt=120393855&ct=home-schema&mt=8",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Echopie One",
-          "url": "https://alarmone.echopie.com/"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "featureList": [
-          "Work/rest rotation alarms",
-          "Specified-date alarms and calendar view",
-          "City-based world clock alarms",
-          "Optional delete after ringing",
-          "Custom ringtone import with Pro on iOS 26.1+",
-          "Alarm groups, widgets, and iCloud sync"
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+        "@graph": [
           {
-            "@type": "Question",
-            "name": "How is Alarm One different from the built-in Clock app?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Alarm One adds work/rest rotations, specified dates, city-based scheduling, optional delete after ringing, custom sound import, alarm groups, calendar views, and widgets."
+            "@type": "WebSite",
+            "@id": "https://alarmone.echopie.com/#website",
+            "name": "Alarm One",
+            "url": "https://alarmone.echopie.com/",
+            "inLanguage": "en-US",
+            "publisher": {
+              "@id": "https://alarmone.echopie.com/#org"
             }
           },
           {
-            "@type": "Question",
-            "name": "Can I set an iPhone alarm for a specific date?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. In Alarm One, create an alarm that rings once, enable Specified Date, and select the future date and time. The regular Clock alarm editor offers times and weekday repeats."
-            }
+            "@type": "Organization",
+            "@id": "https://alarmone.echopie.com/#org",
+            "name": "Echopie One",
+            "url": "https://alarmone.echopie.com/"
           },
           {
-            "@type": "Question",
-            "name": "How do I automatically delete alarms after they ring?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Create a temporary alarm in Alarm One and enable “Delete this alarm after it rings.” This removes that Alarm One alarm after use; it does not delete entries from Apple’s Clock app."
-            }
+            "@type": "MobileApplication",
+            "@id": "https://alarmone.echopie.com/#app",
+            "name": "Alarm One",
+            "url": "https://alarmone.echopie.com/",
+            "operatingSystem": "iOS 26 or later",
+            "applicationCategory": "UtilitiesApplication",
+            "description": "Plan shifts, future dates, and global calls with Alarm One for iPhone. Keep temporary alarms tidy and import custom sounds. Download and build your schedule.",
+            "image": "https://alarmone.echopie.com/assets/alarm-one-social-cover-v2.jpg",
+            "screenshot": [
+              "https://alarmone.echopie.com/assets/shift-work-alarm-iphone/alarm-one-rotation-settings-simulator-1206.webp",
+              "https://alarmone.echopie.com/assets/time-zone-alarm-iphone/weekly-alarm-1206.webp",
+              "https://alarmone.echopie.com/assets/time-zone-alarm-iphone/world-clock-1206.webp",
+              "https://alarmone.echopie.com/assets/rotating-shift-alarms-iphone/pinned-alarm-widget-1020.webp"
+            ],
+            "downloadUrl": "https://apps.apple.com/app/apple-store/id6748434148?pt=120393855&ct=home-schema&mt=8",
+            "sameAs": [
+              "https://apps.apple.com/app/id6748434148"
+            ],
+            "inLanguage": [
+              "en",
+              "fr",
+              "de",
+              "ja",
+              "ko",
+              "pt-BR",
+              "zh-Hans",
+              "es",
+              "zh-Hant"
+            ],
+            "publisher": {
+              "@id": "https://alarmone.echopie.com/#org"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "Work/rest rotation alarms",
+              "Specified-date alarms and calendar view",
+              "City-based world clock alarms",
+              "Optional delete after ringing",
+              "Custom ringtone import with Pro on iOS 26.1+",
+              "Alarm groups, widgets, and iCloud sync"
+            ]
           },
           {
-            "@type": "Question",
-            "name": "Can I import a custom alarm sound without GarageBand?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. With Alarm One Pro on iOS 26.1 or later, import a playable MP3, WAV, AIFF, CAF, or M4A file from Files, select it in the sound picker, and save the alarm."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do world clock alarms work?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Choose a target city and set its local time in Alarm One. The app calculates the local equivalent using the city’s time zone and daylight saving rules."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can Alarm One handle rotating shifts?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Choose Workday → Rotation, set the first work date, and enter the consecutive work and rest day counts. For changing start times or irregular rosters, use separate specified-date alarms."
-            }
+            "@type": "FAQPage",
+            "@id": "https://alarmone.echopie.com/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How is Alarm One different from the built-in Clock app?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Alarm One adds work/rest rotations, every-N-weeks, monthly and yearly repeats, specific dates, alarms in another city's time, skip next, alarm groups, delete after ringing, custom sounds, calendar views, widgets and iCloud sync."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I set an iPhone alarm for a specific date?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. In Alarm One, create an alarm that rings once, enable Specified Date, and select the future date and time. The regular Clock alarm editor offers times and weekday repeats."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I automatically delete alarms after they ring?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Create a temporary alarm in Alarm One and enable “Delete this alarm after it rings.” This removes that Alarm One alarm after use; it does not delete entries from Apple’s Clock app."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I import a custom alarm sound without GarageBand?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. With Alarm One Pro on iOS 26.1 or later, import a playable MP3, WAV, AIFF, CAF, or M4A file from Files, select it in the sound picker, and save the alarm."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do world clock alarms work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Choose a target city and set its local time in Alarm One. The app calculates the local equivalent using the city’s time zone and daylight saving rules."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can Alarm One handle rotating shifts?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Choose Workday → Rotation, set the first work date, and enter the consecutive work and rest day counts. For changing start times or irregular rosters, use separate specified-date alarms."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I skip just the next alarm without turning it off?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. In Alarm One you can skip the next occurrence of a repeating alarm, for example for a public holiday, and it rings again as normal after that. The built-in Clock app can only skip the next alarm of a Sleep schedule."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I set a monthly or yearly alarm?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Alarm One repeats alarms monthly (on a day of the month) or yearly (on a date), as well as on workdays, weekdays, weekends or once."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I turn off a group of alarms at once?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Put alarms in a group, then turn the whole group on or off, or skip it, in one step."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do Alarm One alarms sync to my iPad and Mac?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Alarm One syncs alarms with iCloud across iPhone, iPad and Mac."
+                }
+              }
+            ]
           }
         ]
       }
@@ -139,7 +207,8 @@
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-intro">
-          <h1 id="hero-title">Alarms for<br>real life.</h1>
+          <h1 id="hero-title" class="hero-kicker">The iPhone alarm app for shift work, specific dates and other time zones</h1>
+          <p class="hero-display">Alarms for<br>real life.</p>
           <p class="hero-copy">Alarm One for iPhone follows your shifts, future dates, and cities, with a sound you choose.</p>
           <div class="hero-actions">
             <a class="download app-store-link" href="https://apps.apple.com/app/apple-store/id6748434148?pt=120393855&amp;ct=home-hero&amp;mt=8"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="168" height="56"></a>
@@ -149,13 +218,13 @@
         </div>
         <div class="product-stage" aria-label="Alarm One’s rotation and city alarm interfaces">
           <figure class="product-shot" data-ui>
-            <img src="assets/shift-work-alarm-iphone/alarm-one-rotation-settings-simulator.png" alt="Alarm One Rotation settings with a start date, four work days, and three rest days" width="1206" height="2622">
+            <picture><source type="image/webp" srcset="assets/shift-work-alarm-iphone/alarm-one-rotation-settings-simulator-600.webp 600w, assets/shift-work-alarm-iphone/alarm-one-rotation-settings-simulator-1206.webp 1206w" sizes="(max-width: 599px) 56vw, min(26vw, 355px)"><img src="assets/shift-work-alarm-iphone/alarm-one-rotation-settings-simulator.png" alt="Alarm One Rotation settings with a start date, four work days, and three rest days" width="1206" height="2622"></picture>
           </figure>
           <figure class="product-shot" data-ui>
-            <img src="assets/time-zone-alarm-iphone/weekly-alarm.png" alt="A 9 AM New York City alarm with a preview of 9 PM in Taipei and Weekly repeat controls" width="1206" height="2622" fetchpriority="high">
+            <picture><source type="image/webp" srcset="assets/time-zone-alarm-iphone/weekly-alarm-600.webp 600w, assets/time-zone-alarm-iphone/weekly-alarm-1206.webp 1206w" sizes="(max-width: 599px) 56vw, min(26vw, 355px)"><img src="assets/time-zone-alarm-iphone/weekly-alarm.png" alt="A 9 AM New York City alarm with a preview of 9 PM in Taipei and Weekly repeat controls" width="1206" height="2622" fetchpriority="high"></picture>
           </figure>
           <figure class="product-shot" data-ui>
-            <img src="assets/time-zone-alarm-iphone/world-clock.png" alt="Alarm One World Clock showing local time, New York City, Tokyo, and Paris" width="1206" height="2622">
+            <picture><source type="image/webp" srcset="assets/time-zone-alarm-iphone/world-clock-600.webp 600w, assets/time-zone-alarm-iphone/world-clock-1206.webp 1206w" sizes="(max-width: 599px) 56vw, min(26vw, 355px)"><img src="assets/time-zone-alarm-iphone/world-clock.png" alt="Alarm One World Clock showing local time, New York City, Tokyo, and Paris" width="1206" height="2622" decoding="async"></picture>
           </figure>
         </div>
       </section>
@@ -164,44 +233,45 @@
         <div class="rotation-layout">
           <div class="rotation-output" data-ui aria-label="Interactive 30-day shift schedule preview">
             <h3>Your next 30 days</h3>
-            <p class="rotation-range" data-home-range>Oct 19 – Nov 17, 2026</p>
+            <p class="rotation-range" data-home-range>Day 1 – Day 30</p>
             <div class="calendar-legend"><span><i aria-hidden="true"></i>Work, alarm on</span><span><i class="rest-key" aria-hidden="true"></i>Rest</span></div>
             <div class="calendar-weekdays" aria-hidden="true"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
-            <ul class="calendar-days" data-home-days aria-label="Daily work and rest schedule"><li class="work-day" aria-label="2026-10-19, work, alarm at 07:00"><time datetime="2026-10-19">19</time><span class="day-status">Work</span></li>
-<li class="work-day" aria-label="2026-10-20, work, alarm at 07:00"><time datetime="2026-10-20">20</time><span class="day-status">Work</span></li>
-<li class="work-day" aria-label="2026-10-21, work, alarm at 07:00"><time datetime="2026-10-21">21</time><span class="day-status">Work</span></li>
-<li class="work-day" aria-label="2026-10-22, work, alarm at 07:00"><time datetime="2026-10-22">22</time><span class="day-status">Work</span></li>
-<li class="rest-day" aria-label="2026-10-23, rest, no alarm"><time datetime="2026-10-23">23</time><span class="day-status">Rest</span></li>
-<li class="rest-day" aria-label="2026-10-24, rest, no alarm"><time datetime="2026-10-24">24</time><span class="day-status">Rest</span></li>
-<li class="rest-day" aria-label="2026-10-25, rest, no alarm"><time datetime="2026-10-25">25</time><span class="day-status">Rest</span></li>
-<li class="work-day" aria-label="2026-10-26, work, alarm at 07:00"><time datetime="2026-10-26">26</time><span class="day-status">Work</span></li>
-<li class="work-day" aria-label="2026-10-27, work, alarm at 07:00"><time datetime="2026-10-27">27</time><span class="day-status">Work</span></li>
-<li class="work-day" aria-label="2026-10-28, work, alarm at 07:00"><time datetime="2026-10-28">28</time><span class="day-status">Work</span></li>
-<li class="work-day" aria-label="2026-10-29, work, alarm at 07:00"><time datetime="2026-10-29">29</time><span class="day-status">Work</span></li>
-<li class="rest-day" aria-label="2026-10-30, rest, no alarm"><time datetime="2026-10-30">30</time><span class="day-status">Rest</span></li>
-<li class="rest-day" aria-label="2026-10-31, rest, no alarm"><time datetime="2026-10-31">31</time><span class="day-status">Rest</span></li>
-<li class="rest-day" aria-label="2026-11-01, rest, no alarm"><time datetime="2026-11-01">1</time><span class="day-status">Rest</span></li>
-<li class="work-day" aria-label="2026-11-02, work, alarm at 07:00"><time datetime="2026-11-02">2</time><span class="day-status">Work</span></li>
-<li class="work-day" aria-label="2026-11-03, work, alarm at 07:00"><time datetime="2026-11-03">3</time><span class="day-status">Work</span></li>
-<li class="work-day" aria-label="2026-11-04, work, alarm at 07:00"><time datetime="2026-11-04">4</time><span class="day-status">Work</span></li>
-<li class="work-day" aria-label="2026-11-05, work, alarm at 07:00"><time datetime="2026-11-05">5</time><span class="day-status">Work</span></li>
-<li class="rest-day" aria-label="2026-11-06, rest, no alarm"><time datetime="2026-11-06">6</time><span class="day-status">Rest</span></li>
-<li class="rest-day" aria-label="2026-11-07, rest, no alarm"><time datetime="2026-11-07">7</time><span class="day-status">Rest</span></li>
-<li class="rest-day" aria-label="2026-11-08, rest, no alarm"><time datetime="2026-11-08">8</time><span class="day-status">Rest</span></li>
-<li class="work-day" aria-label="2026-11-09, work, alarm at 07:00"><time datetime="2026-11-09">9</time><span class="day-status">Work</span></li>
-<li class="work-day" aria-label="2026-11-10, work, alarm at 07:00"><time datetime="2026-11-10">10</time><span class="day-status">Work</span></li>
-<li class="work-day" aria-label="2026-11-11, work, alarm at 07:00"><time datetime="2026-11-11">11</time><span class="day-status">Work</span></li>
-<li class="work-day" aria-label="2026-11-12, work, alarm at 07:00"><time datetime="2026-11-12">12</time><span class="day-status">Work</span></li>
-<li class="rest-day" aria-label="2026-11-13, rest, no alarm"><time datetime="2026-11-13">13</time><span class="day-status">Rest</span></li>
-<li class="rest-day" aria-label="2026-11-14, rest, no alarm"><time datetime="2026-11-14">14</time><span class="day-status">Rest</span></li>
-<li class="rest-day" aria-label="2026-11-15, rest, no alarm"><time datetime="2026-11-15">15</time><span class="day-status">Rest</span></li>
-<li class="work-day" aria-label="2026-11-16, work, alarm at 07:00"><time datetime="2026-11-16">16</time><span class="day-status">Work</span></li>
-<li class="work-day" aria-label="2026-11-17, work, alarm at 07:00"><time datetime="2026-11-17">17</time><span class="day-status">Work</span></li></ul>
+            <ul class="calendar-days" data-home-days aria-label="Daily work and rest schedule"><li class="work-day" aria-label="Day 1, work, alarm at 07:00"><span class="day-number">1</span><span class="day-status">Work</span></li>
+<li class="work-day" aria-label="Day 2, work, alarm at 07:00"><span class="day-number">2</span><span class="day-status">Work</span></li>
+<li class="work-day" aria-label="Day 3, work, alarm at 07:00"><span class="day-number">3</span><span class="day-status">Work</span></li>
+<li class="work-day" aria-label="Day 4, work, alarm at 07:00"><span class="day-number">4</span><span class="day-status">Work</span></li>
+<li class="rest-day" aria-label="Day 5, rest, no alarm"><span class="day-number">5</span><span class="day-status">Rest</span></li>
+<li class="rest-day" aria-label="Day 6, rest, no alarm"><span class="day-number">6</span><span class="day-status">Rest</span></li>
+<li class="rest-day" aria-label="Day 7, rest, no alarm"><span class="day-number">7</span><span class="day-status">Rest</span></li>
+<li class="work-day" aria-label="Day 8, work, alarm at 07:00"><span class="day-number">8</span><span class="day-status">Work</span></li>
+<li class="work-day" aria-label="Day 9, work, alarm at 07:00"><span class="day-number">9</span><span class="day-status">Work</span></li>
+<li class="work-day" aria-label="Day 10, work, alarm at 07:00"><span class="day-number">10</span><span class="day-status">Work</span></li>
+<li class="work-day" aria-label="Day 11, work, alarm at 07:00"><span class="day-number">11</span><span class="day-status">Work</span></li>
+<li class="rest-day" aria-label="Day 12, rest, no alarm"><span class="day-number">12</span><span class="day-status">Rest</span></li>
+<li class="rest-day" aria-label="Day 13, rest, no alarm"><span class="day-number">13</span><span class="day-status">Rest</span></li>
+<li class="rest-day" aria-label="Day 14, rest, no alarm"><span class="day-number">14</span><span class="day-status">Rest</span></li>
+<li class="work-day" aria-label="Day 15, work, alarm at 07:00"><span class="day-number">15</span><span class="day-status">Work</span></li>
+<li class="work-day" aria-label="Day 16, work, alarm at 07:00"><span class="day-number">16</span><span class="day-status">Work</span></li>
+<li class="work-day" aria-label="Day 17, work, alarm at 07:00"><span class="day-number">17</span><span class="day-status">Work</span></li>
+<li class="work-day" aria-label="Day 18, work, alarm at 07:00"><span class="day-number">18</span><span class="day-status">Work</span></li>
+<li class="rest-day" aria-label="Day 19, rest, no alarm"><span class="day-number">19</span><span class="day-status">Rest</span></li>
+<li class="rest-day" aria-label="Day 20, rest, no alarm"><span class="day-number">20</span><span class="day-status">Rest</span></li>
+<li class="rest-day" aria-label="Day 21, rest, no alarm"><span class="day-number">21</span><span class="day-status">Rest</span></li>
+<li class="work-day" aria-label="Day 22, work, alarm at 07:00"><span class="day-number">22</span><span class="day-status">Work</span></li>
+<li class="work-day" aria-label="Day 23, work, alarm at 07:00"><span class="day-number">23</span><span class="day-status">Work</span></li>
+<li class="work-day" aria-label="Day 24, work, alarm at 07:00"><span class="day-number">24</span><span class="day-status">Work</span></li>
+<li class="work-day" aria-label="Day 25, work, alarm at 07:00"><span class="day-number">25</span><span class="day-status">Work</span></li>
+<li class="rest-day" aria-label="Day 26, rest, no alarm"><span class="day-number">26</span><span class="day-status">Rest</span></li>
+<li class="rest-day" aria-label="Day 27, rest, no alarm"><span class="day-number">27</span><span class="day-status">Rest</span></li>
+<li class="rest-day" aria-label="Day 28, rest, no alarm"><span class="day-number">28</span><span class="day-status">Rest</span></li>
+<li class="work-day" aria-label="Day 29, work, alarm at 07:00"><span class="day-number">29</span><span class="day-status">Work</span></li>
+<li class="work-day" aria-label="Day 30, work, alarm at 07:00"><span class="day-number">30</span><span class="day-status">Work</span></li></ul>
             <p class="rotation-result" data-home-result role="status">4 work days, then 3 rest days. 18 alarms in the next 30 days, at 07:00.</p>
             <p class="preview-note">A schedule preview. Create and save your alarm in Alarm One.</p>
           </div>
           <div class="rotation-controls">
-            <h2 id="choose-setup-title">Your cycle.<br>Your alarm.</h2>
+            <p class="eyebrow">Your cycle. Your alarm.</p>
+            <h2 id="choose-setup-title">Rotating shift alarms: set 4 on 4 off, 2 on 2 off or any work/rest cycle</h2>
             <p>A shift pattern keeps going when the week ends. Choose your first work date and the days that follow it.</p>
             <div class="rotation-presets" aria-label="Example shift patterns" hidden>
               <button type="button" data-work="4" data-rest="3" aria-pressed="true">4 on, 3 off</button>
@@ -218,34 +288,40 @@
                 <input id="home-rest" name="rest" type="number" min="1" max="60" step="1" value="3" required inputmode="numeric">
               </div>
               <div class="date-time-fields">
-                <div><label for="home-date">First work date</label><input id="home-date" name="start" type="date" min="0001-01-01" max="9999-11-30" value="2026-10-19" required></div>
+                <div><label for="home-date">First work date</label><input id="home-date" name="start" type="date" min="0001-01-01" max="9999-11-30" required></div>
                 <div><label for="home-time">Alarm time</label><input id="home-time" name="time" type="time" value="07:00" required></div>
               </div>
               <p class="form-error" data-home-error role="alert" hidden></p>
             </form>
-            <noscript><p class="rotation-noscript">The example shows four work days followed by three rest days, beginning October 19, 2026. Enable JavaScript to try your own cycle.</p></noscript>
-            <a class="text-link" href="blog/shift-work-alarm-iphone">Set up a rotation alarm</a>
+            <noscript><p class="rotation-noscript">The example shows four work days followed by three rest days, starting on your first work date. Enable JavaScript to try your own cycle.</p></noscript>
+            <p class="section-guides"><a class="text-link" href="blog/rotating-shift-alarms-iphone">Rotating shift alarm guide →</a> <a class="text-link" href="blog/shift-work-alarm-iphone">Shift work alarm guide →</a></p>
           </div>
         </div>
       </section>
 
       <section class="chapter world-section" aria-labelledby="time-zone-title">
         <div class="world-layout">
-          <h2 id="time-zone-title">Their time.<br>Your alarm.</h2>
+          <div class="world-heading">
+            <p class="eyebrow">Their time. Your alarm.</p>
+            <h2 id="time-zone-title">Set an alarm in another city's time zone</h2>
+          </div>
           <figure class="world-portrait" data-ui>
-            <img src="assets/time-zone-alarm-iphone/world-clock.png" alt="World Clock with a New York standup alarm and the equivalent time at home" width="1206" height="2622" loading="lazy">
+            <picture><source type="image/webp" srcset="assets/time-zone-alarm-iphone/world-clock-600.webp 600w, assets/time-zone-alarm-iphone/world-clock-1206.webp 1206w" sizes="(max-width: 599px) min(75vw, 300px), 330px"><img src="assets/time-zone-alarm-iphone/world-clock.png" alt="World Clock with a New York standup alarm and the equivalent time at home" width="1206" height="2622" loading="lazy" decoding="async"></picture>
           </figure>
           <div class="world-copy">
             <p>9 AM in New York. Whatever that means where you are.</p>
             <p>Choose a city, set its local time, and see your own time before you save. Alarm One handles time zones and daylight saving.</p>
             <p class="requirement">City-based alarms require Pro.</p>
-            <a class="text-link" href="blog/time-zone-alarm-iphone">Set a city alarm</a>
+            <a class="text-link" href="blog/time-zone-alarm-iphone">Time zone alarm guide →</a>
           </div>
         </div>
       </section>
 
       <section class="chapter features-section" id="features" aria-labelledby="features-title">
-        <h2 id="features-title">Make room for life.</h2>
+        <div class="features-heading">
+          <p class="eyebrow">Make room for life.</p>
+          <h2 id="features-title">What the iPhone Clock app can't do</h2>
+        </div>
         <div class="capability">
           <a href="blog/set-alarm-specific-date-iphone">Pick a date.</a>
           <p>That early flight. The exam next month. Set an alarm for a specific future date and find it in your calendar.</p>
@@ -280,26 +356,34 @@
 
       <section class="chapter widget-section" aria-labelledby="routine-title">
         <div class="widget-copy">
-          <h2 id="routine-title">Your next alarm,<br>in view.</h2>
+          <p class="eyebrow">Your next alarm, in view.</p>
+          <h2 id="routine-title">Home Screen and Lock Screen alarm widgets</h2>
           <p>Pin an alarm to your Home Screen. See the time, date, and label, with a skip control within reach.</p>
           <a class="text-link" href="blog/rotating-shift-alarms-iphone">Build your shift routine</a>
         </div>
         <figure class="widget-picture" data-ui>
-          <img src="assets/rotating-shift-alarms-iphone/pinned-alarm-widget.png" alt="Alarm One’s Home Screen Widgets preview with a pinned 08:15 Exercise alarm, its date, and a Skip button" width="1398" height="2034" loading="lazy">
+          <picture><source type="image/webp" srcset="assets/rotating-shift-alarms-iphone/pinned-alarm-widget-600.webp 600w, assets/rotating-shift-alarms-iphone/pinned-alarm-widget-1020.webp 1020w" sizes="(max-width: 599px) min(100vw, 350px), 510px"><img src="assets/rotating-shift-alarms-iphone/pinned-alarm-widget.png" alt="Alarm One’s Home Screen Widgets preview with a pinned 08:15 Exercise alarm, its date, and a Skip button" width="1398" height="2034" loading="lazy" decoding="async"></picture>
         </figure>
       </section>
 
       <section class="faq-section" id="faq" aria-labelledby="faq-title">
         <div class="faq-header" id="product-fit">
-          <h2 id="faq-title">Before you set it.</h2>
+          <div class="faq-title">
+            <p class="eyebrow">Before you set it.</p>
+            <h2 id="faq-title">Alarm One FAQ</h2>
+          </div>
           <p>Alarm One requires iOS 26 or later. City alarms need Pro; importing your own audio needs Pro and iOS 26.1 or later. <a href="support">Visit support</a> for setup help.</p>
         </div>
-        <details class="faq" open><summary>How is Alarm One different from the built-in Clock app?</summary><p>Alarm One adds work/rest rotations, specified dates, city-based scheduling, optional delete after ringing, custom sound import, alarm groups, calendar views, and widgets.</p></details>
+        <details class="faq" open><summary>How is Alarm One different from the built-in Clock app?</summary><p>Alarm One adds work/rest rotations, every-N-weeks, monthly and yearly repeats, specific dates, alarms in another city's time, skip next, alarm groups, delete after ringing, custom sounds, calendar views, widgets and iCloud sync.</p></details>
 <details class="faq" open><summary>Can I set an iPhone alarm for a specific date?</summary><p>Yes. In Alarm One, create an alarm that rings once, enable Specified Date, and select the future date and time. The regular Clock alarm editor offers times and weekday repeats.</p></details>
 <details class="faq" open><summary>How do I automatically delete alarms after they ring?</summary><p>Create a temporary alarm in Alarm One and enable “Delete this alarm after it rings.” This removes that Alarm One alarm after use; it does not delete entries from Apple’s Clock app.</p></details>
 <details class="faq" open><summary>Can I import a custom alarm sound without GarageBand?</summary><p>Yes. With Alarm One Pro on iOS 26.1 or later, import a playable MP3, WAV, AIFF, CAF, or M4A file from Files, select it in the sound picker, and save the alarm.</p></details>
-<details class="faq" open><summary>How do world clock alarms work?</summary><p>Choose a target city and set its local time in Alarm One. The app calculates the local equivalent using the city’s time zone and daylight saving rules.</p></details>
-<details class="faq" open><summary>Can Alarm One handle rotating shifts?</summary><p>Yes. Choose Workday → Rotation, set the first work date, and enter the consecutive work and rest day counts. For changing start times or irregular rosters, use separate specified-date alarms.</p></details>
+<details class="faq"><summary>How do world clock alarms work?</summary><p>Choose a target city and set its local time in Alarm One. The app calculates the local equivalent using the city’s time zone and daylight saving rules.</p></details>
+<details class="faq"><summary>Can Alarm One handle rotating shifts?</summary><p>Yes. Choose Workday → Rotation, set the first work date, and enter the consecutive work and rest day counts. For changing start times or irregular rosters, use separate specified-date alarms.</p></details>
+<details class="faq"><summary>Can I skip just the next alarm without turning it off?</summary><p>Yes. In Alarm One you can skip the next occurrence of a repeating alarm, for example for a public holiday, and it rings again as normal after that. The built-in Clock app can only skip the next alarm of a Sleep schedule.</p></details>
+<details class="faq"><summary>Can I set a monthly or yearly alarm?</summary><p>Yes. Alarm One repeats alarms monthly (on a day of the month) or yearly (on a date), as well as on workdays, weekdays, weekends or once.</p></details>
+<details class="faq"><summary>Can I turn off a group of alarms at once?</summary><p>Yes. Put alarms in a group, then turn the whole group on or off, or skip it, in one step.</p></details>
+<details class="faq"><summary>Do Alarm One alarms sync to my iPad and Mac?</summary><p>Yes. Alarm One syncs alarms with iCloud across iPhone, iPad and Mac.</p></details>
       </section>
 
       <section class="chapter close-section" aria-labelledby="close-title">
@@ -317,7 +401,7 @@
           <a href="about">About</a><a href="blog/">Guides</a><a href="support">Support</a><a href="privacy">Privacy</a>
           <a href="https://apps.apple.com/app/apple-store/id6748434148?pt=120393855&amp;ct=home-footer&amp;mt=8">App Store</a>
         </nav>
-        <p class="footer-credit">More apps by Echopie: <a href="https://fplpace.echopie.com">FPL Pace</a><br>Independently developed by Qingzhe Wu.<br>&copy; <span data-year>2026</span> Echopie One</p>
+        <p class="footer-credit">More apps by Echopie: <a href="https://fplpace.echopie.com/en">FPL Pace</a> — live FPL points and H2H rivals for iPhone<br>Independently developed by Qingzhe Wu.<br>&copy; <span data-year>2026</span> Echopie One</p>
       </div>
       <p class="footer-wordmark" aria-hidden="true">Alarm One</p>
     </footer>
