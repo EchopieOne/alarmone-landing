@@ -176,7 +176,7 @@ for page, doc in docs.items():
         assert breadcrumb["itemListElement"][-1]["item"] == canonical
         assert resolve(urlsplit(article["image"]).path).is_file(), f"{name}: schema image missing"
         assert faq_schema, f"{name}: FAQ schema missing"
-    # FPL-6: Organization nodes declare the Echopie brand site; the app node keeps its App Store identity.
+    # FPL-6: Organization nodes and the app node list the Echopie brand site in sameAs; the app also lists its App Store URL.
     nodes, stack = [], list(schemas)
     while stack:
         item = stack.pop()
@@ -189,7 +189,7 @@ for page, doc in docs.items():
         if item.get("@type") == "Organization":
             assert ECHOPIE in item.get("sameAs", []), f"{name}: Organization JSON-LD missing sameAs {ECHOPIE}"
         if item.get("@type") == "MobileApplication":
-            assert APP_STORE in item.get("sameAs", []), f"{name}: app JSON-LD missing App Store sameAs"
+            assert item.get("sameAs") == [APP_STORE, ECHOPIE], f"{name}: app JSON-LD sameAs should be the App Store URL and {ECHOPIE}"
     print(f"OK {name}: title {len(title)}, description {len(description)}")
 
 redirects = {}
