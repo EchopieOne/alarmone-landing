@@ -18,4 +18,4 @@ node scripts/check_rotation.mjs         # rotation preview examples
 
 ## Deploys
 
-Cloudflare Workers Builds runs `npx wrangler deploy` on `main` and `npx wrangler preview` on other branches, from the repo root with no build command. Configuration lives in `wrangler.jsonc`; the empty `previews` block enables branch previews. `.assetsignore` keeps repo tooling out of the public site.
+Cloudflare Workers Builds runs `npx wrangler deploy` on `main` and `npx wrangler preview` on other branches, from the repo root with no build command. Wrangler is pinned to `4.156.2` in `package.json` and `package-lock.json`. [Workers Builds automatically installs dependencies](https://developers.cloudflare.com/workers/ci-cd/builds/build-image/#skip-dependency-install), so these commands use the pinned local version. Configuration lives in `wrangler.jsonc`; the empty `previews` block enables branch previews. `.assetsignore` keeps repo tooling out of the public site.

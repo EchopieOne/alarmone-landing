@@ -6,6 +6,8 @@
 .taste-skill/
 .wrangler/
 node_modules/
+package.json
+package-lock.json
 .gitignore
 .assetsignore
 .DS_Store

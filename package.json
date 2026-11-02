@@ -1,0 +1,7 @@
+{
+  "name": "alarmone-landing",
+  "private": true,
+  "devDependencies": {
+    "wrangler": "4.156.2"
+  }
+}
