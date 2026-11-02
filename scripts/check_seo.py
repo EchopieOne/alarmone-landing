@@ -15,6 +15,14 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://alarmone.echopie.com"
+# ALA-77: preserve the approved metadata verbatim, including the site title suffix.
+# Other pages still use the default title and description length checks.
+APPROVED_METADATA = {
+    "blog/iphone-alarm-no-sound-ios-27.html": (
+        "iPhone Alarm No Sound on iOS 27: Flash Fix Checklist | Alarm One",
+        "iPhone alarm flashes or lights up with no sound on iOS 27? Check Alarms and Timers volume, update or unpair Apple Watch, then run a locked test. Clock backup tips for third-party apps.",
+    ),
+}
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
 
 
@@ -98,8 +106,11 @@ for page, doc in docs.items():
     assert len(title) == 1, f"{name}: expected one title"
     title = title[0].text()
     description = meta["description"]
-    assert 55 <= len(title) <= 60, f"{name}: title length {len(title)}"
-    assert 150 <= len(description) <= 160, f"{name}: description length {len(description)}"
+    if str(name) in APPROVED_METADATA:
+        assert (title, description) == APPROVED_METADATA[str(name)], f"{name}: metadata differs from approved copy"
+    else:
+        assert 55 <= len(title) <= 60, f"{name}: title length {len(title)}"
+        assert 150 <= len(description) <= 160, f"{name}: description length {len(description)}"
     assert title not in titles and description not in descriptions, f"{name}: duplicate metadata"
     titles.add(title)
     descriptions.add(description)
