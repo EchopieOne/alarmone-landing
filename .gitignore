@@ -2,3 +2,5 @@
 *.log
 .work/time-zone-refresh/
 .taste-skill/
+node_modules/
+.wrangler/
