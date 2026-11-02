@@ -29,6 +29,15 @@
       content="Setup requirements, feature overview, troubleshooting steps, and contact options for Alarm One."
     >
     <meta name="twitter:image" content="https://alarmone.echopie.com/assets/app-screenshot.jpg">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Alarm One User Support Guide",
+        "url": "https://alarmone.echopie.com/support",
+        "dateModified": "2026-11-02"
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -73,10 +82,15 @@
             <h2>Find the setup for your schedule</h2>
             <ul><li><a href="blog/rotating-shift-alarms-iphone">Work/rest rotation and 4-on-4-off setup</a></li><li><a href="blog/set-alarm-specific-date-iphone">An alarm on a specific future date</a></li><li><a href="blog/time-zone-alarm-iphone">An alarm in another city’s time zone</a></li><li><a href="blog/one-time-alarm-iphone">An alarm that deletes itself after use</a></li><li><a href="blog/custom-alarm-sound-iphone">Import a supported audio file</a></li></ul>
           </section>
-          <section>
+          <section id="if-an-alarm-did-not-ring">
             <h2>If an alarm did not ring</h2>
-            <ol><li>Check that the alarm was saved and enabled in Alarm One. Alarms in Clock and a Sleep/Wake Up schedule are separate.</li><li>Review alarm access, the selected sound, and the next scheduled date and time. Check AM/PM and any skipped occurrence.</li><li>For Rotation, check the first work date and work/rest counts. For a city alarm, check the selected city, date, and local-time conversion.</li><li>Create a short test alarm while awake. If the issue continues, send the versions and steps below to support.</li></ol>
-            <p>Do not infer an alarm’s behavior from ordinary notification settings alone. Use the alarm permission and saved schedule as your starting point.</p>
+            <ol>
+              <li>Confirm the alarm is saved and enabled in Alarm One. Clock alarms and Sleep/Wake Up schedules are separate.</li>
+              <li>Review alarm access, the selected sound, AM/PM, the next date/time, and any skipped occurrence. For Rotation, check the first work date and work/rest counts; for a city alarm, check the city and local-time conversion.</li>
+              <li><strong>On iOS 27:</strong> If the phone lit up or the flashlight flashed with no sound, check <strong>Settings → Sounds &amp; Haptics → Alarms and Timers</strong>, update a paired Apple Watch to <strong>watchOS 27</strong> (or consider unpairing an unsupported watch), and run a <strong>locked</strong> two-minute Clock test. Silent mode and Focus do not mute Clock alarms.</li>
+              <li><strong>Third-party apps (including Alarm One):</strong> Alarm One alarms can also be affected on iOS 27, and we are sorry for the hassle. Until Apple ships a fix, please complete the volume and Watch checks above, run a locked test, and keep a <strong>Clock backup</strong> for any alarm you cannot miss. For background, see TechBetweenTheLines on Feedback FB23754550.</li>
+              <li>Create a short test while you are awake. If it still fails, email support with your iOS version, Alarm One version, schedule settings, and what you expected versus what happened.</li>
+            </ol>
           </section>
           <section>
             <h2>If the dates do not match your roster</h2>

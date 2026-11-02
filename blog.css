@@ -30,6 +30,8 @@
 .breadcrumbs a { text-decoration: none; }
 .breadcrumbs a:hover { text-decoration: underline; }
 .article-heading h1 { font-size: clamp(44px, 5.55vw, 80px); line-height: 1.02; max-width: 18ch; }
+.article-hero-text .article-heading { grid-column: 1 / -1; }
+.article-hero-text .article-heading h1 { max-width: 28ch; }
 .article-heading .lead { font-size: var(--body); margin-top: 32px; max-width: 66ch; }
 .article-meta { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 28px; font-size: var(--small); }
 .article-meta > span:has(+ time), .article-meta > span:empty { display: none; }
