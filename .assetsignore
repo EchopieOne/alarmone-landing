@@ -1,0 +1,20 @@
+# Repository metadata, tooling, and local artifacts are not public site assets.
+.git/
+.github/
+.agents/
+.work/
+.taste-skill/
+.wrangler/
+node_modules/
+.gitignore
+.assetsignore
+.DS_Store
+*.log
+*.md
+skills-lock.json
+wrangler.jsonc
+scripts/
+design/
+
+# Keep HTML, CSS, JS/MJS, assets/, verification, robots.txt, and sitemap.xml.
+# Keep _redirects and _headers available for Wrangler to process as metadata.

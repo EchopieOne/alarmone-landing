@@ -16,4 +16,6 @@ python3 scripts/check_seo.py            # metadata, links, JSON-LD and footer ch
 node scripts/check_rotation.mjs         # rotation preview examples
 ```
 
-The site deploys automatically when changes are merged to `main`.
+## Deploys
+
+Cloudflare Workers Builds runs `npx wrangler deploy` on `main` and `npx wrangler preview` on other branches, from the repo root with no build command. Configuration lives in `wrangler.jsonc`; the empty `previews` block enables branch previews. `.assetsignore` keeps repo tooling out of the public site.
